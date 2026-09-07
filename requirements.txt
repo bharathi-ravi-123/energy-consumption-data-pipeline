@@ -1,0 +1,5 @@
+pyspark
+pandas
+pytest
+dbt-core
+apache-airflow
