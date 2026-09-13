@@ -93,7 +93,7 @@ The Bronze layer stores the ingested data in its raw form while maintaining the 
 
 The pipeline receives the following datasets:
 
-```text
+
 Energy Usage
 Device Metrics
 Grid Load
@@ -108,7 +108,7 @@ The Bronze layer stores the raw energy-related datasets ingested from the source
 
 ### Bronze Tables
 
-```text
+
 energy_catalog.bronze.energy_usage_stream
 energy_catalog.bronze.device_metrics_stream
 energy_catalog.bronze.grid_load_stream
@@ -146,7 +146,7 @@ The Silver layer cleans, standardizes, validates, and prepares the Bronze data f
 
 ### 📋 Silver Models
 
-```text
+
 energy_cleaned
 device_metrics_cleaned
 grid_load_cleaned
@@ -165,7 +165,7 @@ The Gold layer follows a **Star Schema** with dimension tables and a fact table.
 
 #### 📚 Dimension Tables
 
-```text
+
 dim_household
 dim_feeder
 dim_operator
@@ -235,7 +235,7 @@ The complete pipeline is orchestrated using **Apache Airflow**.
 
 ### 🔁 Pipeline Flow
 
-```text
+
 Azure Data Factory
         ↓
 Azure Data Lake Storage Gen2
@@ -285,15 +285,15 @@ The project includes dashboards generated from the Gold layer for energy consump
 
 ### ⚡ Energy Overview
 
-[View Energy Overview Dashboard](Dashboards/energy_overview.pdf)
+![Energy Overview Dashboard](Dashboards/energy_overview_page-0001.jpg)
 
 ### 🔌 Energy Grid Analysis
 
-[View Energy Grid Dashboard](Dashboards/energy_grid.pdf)
+[View Energy Grid Dashboard](Dashboards/energy_grid_page-0001.jpg)
 
 ### 📈 Energy Forecast
 
-[View Energy Forecast Dashboard](Dashboards/energy_forecast.pdf)
+[View Energy Forecast Dashboard](Dashboards/energy_forecast_page-0001.jpg)
 
 These dashboards provide insights into energy consumption, grid performance, forecasting, and related operational metrics.
 
@@ -319,7 +319,7 @@ These insights can support better energy monitoring, forecasting, and operationa
 
 ## 📁 Project Structure
 
-```text
+
 energy-consumption-data-pipeline/
 │
 ├── Dashboards/
