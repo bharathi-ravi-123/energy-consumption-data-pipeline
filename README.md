@@ -289,11 +289,11 @@ The project includes dashboards generated from the Gold layer for energy consump
 
 ### 🔌 Energy Grid Analysis
 
-[View Energy Grid Dashboard](Dashboards/energy_grid_page-0001.jpg)
+![ Energy Grid Dashboard](Dashboards/energy_grid_page-0001.jpg)
 
 ### 📈 Energy Forecast
 
-[View Energy Forecast Dashboard](Dashboards/energy_forecast_page-0001.jpg)
+![Energy Forecast Dashboard](Dashboards/energy_forecast_page-0001.jpg)
 
 These dashboards provide insights into energy consumption, grid performance, forecasting, and related operational metrics.
 
