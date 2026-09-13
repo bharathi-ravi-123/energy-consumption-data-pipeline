@@ -1,0 +1,135 @@
+version: 2
+
+models:
+
+  # =========================
+  # DIMENSION: HOUSEHOLD
+  # =========================
+  - name: dim_household
+    description: "Household dimension"
+    columns:
+      - name: household_id
+        description: "Unique household identifier"
+        tests:
+          - not_null
+
+
+  # =========================
+  # DIMENSION: SUBSTATION
+  # =========================
+  - name: dim_substation
+    description: "Substation dimension"
+    columns:
+      - name: substation_name
+        description: "Name of the electrical substation"
+        tests:
+          - not_null
+
+
+  # =========================
+  # DIMENSION: FEEDER
+  # =========================
+  - name: dim_feeder
+    description: "Feeder dimension"
+    columns:
+      - name: feeder_line
+        description: "Feeder line identifier"
+        tests:
+          - not_null
+
+
+  # =========================
+  # DIMENSION: OPERATOR
+  # =========================
+  - name: dim_operator
+    description: "Grid operator dimension"
+    columns:
+      - name: operator_name
+        description: "Grid operator name"
+        tests:
+          - not_null
+
+
+  # =========================
+  # DIMENSION: ZONE
+  # =========================
+  - name: dim_zone
+    description: "Distribution zone dimension"
+    columns:
+      - name: zone_name
+        description: "Distribution zone"
+        tests:
+          - not_null
+
+
+  # =========================
+  # DIMENSION: TIME
+  # =========================
+  - name: dim_time
+    description: "Time dimension"
+    columns:
+      - name: time_key
+        description: "Hourly time key"
+        tests:
+          - not_null
+          - unique
+
+
+  # =========================
+  # DIMENSION: WEATHER
+  # =========================
+  - name: dim_weather
+    description: "Weather dimension"
+    columns:
+      - name: weather_station
+        description: "Weather station"
+        tests:
+          - not_null
+
+      - name: condition_type
+        description: "Standardized weather condition"
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - Sunny
+                - Rainy
+                - Cloudy
+
+
+  # =========================
+  # FACT: GRID LOAD
+  # =========================
+  - name: fact_grid_load
+    description: "Grid load fact table"
+    columns:
+
+      - name: household_id
+        description: "Household identifier"
+        tests:
+          - not_null
+
+      - name: grid_region
+        description: "Grid region"
+        tests:
+          - not_null
+
+      - name: substation_name
+        description: "Substation name"
+        tests:
+          - not_null
+
+      - name: feeder_line
+        description: "Feeder line"
+        tests:
+          - not_null
+
+      - name: distribution_zone
+        description: "Distribution zone"
+        tests:
+          - not_null
+
+      - name: grid_operator
+        description: "Grid operator"
+        tests:
+          - not_null
