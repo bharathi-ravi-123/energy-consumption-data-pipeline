@@ -319,49 +319,67 @@ These insights can support better energy monitoring, forecasting, and operationa
 
 ## 📁 Project Structure
 
-
+```text
 energy-consumption-data-pipeline/
 │
-├── Dashboards/
+├── 📂 Dashboards/
 │   ├── energy_forecast.pdf
 │   ├── energy_grid.pdf
 │   └── energy_overview.pdf
 │
-├── Datasets/
+├── 📂 Datasets/
 │   ├── device_metrics_stream.csv
 │   ├── energy_usage_stream.csv
 │   ├── grid_load_stream.csv
-│   ├── tariff_metrics_stream_v2 .csv
+│   ├── tariff_metrics_stream_v2.csv
 │   └── weather_source_v2.csv
 │
-├── Designs/
+├── 📂 Designs/
 │   ├── High level design.jpg
 │   ├── Low_level_design.jpeg
 │   └── Data model.jpeg
 │
-├── Development/
-│   ├── DAG/
-│   ├── Silver/
-│   └── Gold/
+├── 📂 Development/
+│   ├── 📂 DAG/
+│   │   └── energy_consumption_job.py
+│   │
+│   ├── 📂 Silver/
+│   │   ├── device_metrics_cleaned.sql
+│   │   ├── energy_cleaned.sql
+│   │   ├── grid_load_cleaned.sql
+│   │   ├── tariff_metrics_cleaned.sql
+│   │   └── weather_source_cleaned.sql
+│   │
+│   └── 📂 Gold/
+│       ├── dim_feeder.sql
+│       ├── dim_household.sql
+│       ├── dim_operator.sql
+│       ├── dim_substation.sql
+│       ├── dim_zone.sql
+│       ├── fact_energy_consumption.sql
+│       └── schema.yml
 │
-├── tests/
+├── 📂 tests/
 │   └── pytest.py
 │
-├── assets/
+├── 📂 assets/
 │   ├── bronze.png
 │   ├── silver.png
 │   └── gold.png
 │
-└── README.md
+├── 📊 Energy_Consumption_Forecasting_Pipeline_Presentation.pptx
+│
+└── 📄 README.md
 
-👨‍💻 Team
+## 👨‍💻 Team
 
-Energy Consumption Forecasting Pipeline
+### Energy Consumption Forecasting Pipeline
 
-Team Members
-Bharathi R
-Neha
-Sakthivel
-Venkatesh
-Balaji
-Maneendra 
+**Team Members**
+
+- Bharathi R
+- Neha
+- Sakthivel
+- Venkatesh
+- Balaji
+- Maneendra
